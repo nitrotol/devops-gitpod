@@ -1,4 +1,4 @@
-FROM ubuntu:${BASE_TAG}
+FROM ubuntu:20.04
 
 #Install base softvare deps
 RUN apt update && DEBIAN_FRONTEND=noninteractive \
