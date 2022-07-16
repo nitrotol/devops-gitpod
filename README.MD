@@ -1,6 +1,7 @@
 # DevOps toolkit for GitPod
 
-
+[![Nightly build](https://github.com/nitrotol/devops-gitpod/actions/workflows/nightly.yml/badge.svg)](https://github.com/nitrotol/devops-gitpod/actions/workflows/nightly.yml)
+[![Release build](https://github.com/nitrotol/devops-gitpod/actions/workflows/release.yml/badge.svg)](https://github.com/nitrotol/devops-gitpod/actions/workflows/release.yml)
 
 ### This toolkit contains:
 * Docker Image
