@@ -2,9 +2,9 @@ name: Build and push to registry
 
 on:
   release:
-    types: [ released ]
+    types: [ published ]
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 * * * *'
 
 jobs:
   docker:
@@ -22,9 +22,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags:
-            nitrotol/devops-gitpod:${{ github.ref_name }}
-            nitrotol/devops-gitpod:latest
+          tags: ${{ github.repository }}:${{ github.ref_name }} , ${{ github.repository }}:latest
       - name: Set env for tag
         if: ${{ github.ref_type != 'tag' }}
         run: echo "NIGHTLY_TAG=$(date +%m-%Y)" >> $GITHUB_ENV
@@ -34,5 +32,4 @@ jobs:
         with:
           push: true
           tags:
-            nitrotol/devops-gitpod:nightly-latest
-            nitrotol/devops-gitpod:nightly-${{ env.NIGHTLY_TAG }}
+            ${{ github.repository }}:nightly-latest , ${{ github.repository }}:nightly-${{ env.NIGHTLY_TAG }}
