@@ -1,13 +1,11 @@
-name: Build and push to registry
+name: Release build
 
 on:
   release:
     types: [ published ]
-  schedule:
-    - cron: '45 * * * *'
 
 jobs:
-  docker:
+  build-n-push:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Docker Buildx
