@@ -1,7 +1,4 @@
-ARG BASE="ubuntu"
-ARG BASE_TAG="20.04"
-
-FROM ${BASE}:${BASE_TAG}
+FROM ubuntu:${BASE_TAG}
 
 #Install base softvare deps
 RUN apt update && DEBIAN_FRONTEND=noninteractive \

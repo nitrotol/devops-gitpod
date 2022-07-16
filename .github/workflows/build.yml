@@ -23,7 +23,6 @@ jobs:
         with:
           push: true
           build-args:
-            BASE=${{ secrets.BASE }}
             BASE_TAG=${{ secrets.BASE_TAG }}
           tags: ${{ github.repository }}:${{ github.ref_name }} , ${{ github.repository }}:latest
       - name: Set env for tag
@@ -35,7 +34,6 @@ jobs:
         with:
           push: true
           build-args:
-            BASE=${{ secrets.BASE }}
             BASE_TAG=${{ secrets.BASE_TAG }}
           tags:
             ${{ github.repository }}:nightly-latest , ${{ github.repository }}:nightly-${{ env.NIGHTLY_TAG }}
