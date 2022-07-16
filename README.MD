@@ -1,5 +1,6 @@
 # DevOps toolkit for GitPod
 
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/nitrotol/devops-gitpod)
 [![Nightly build](https://github.com/nitrotol/devops-gitpod/actions/workflows/nightly.yml/badge.svg)](https://github.com/nitrotol/devops-gitpod/actions/workflows/nightly.yml)
 [![Release build](https://github.com/nitrotol/devops-gitpod/actions/workflows/release.yml/badge.svg)](https://github.com/nitrotol/devops-gitpod/actions/workflows/release.yml)
 
@@ -22,7 +23,8 @@ Releases of this image published when come some important changes.
 These releases tagged as `latest` and corresponding version number.
 
 Also, for keep all software versions up-to-date scheduled monthly-based nightly builds. 
-There are tagged as `nightly-latest` and `nightly-MM-YYYY`
+There are tagged as `nightly-latest` and `nightly-MM-YYYY`.
+Publishing of new release also update current month nightly image.
 
 #### Image based on Ubuntu 20.04
 
@@ -36,3 +38,5 @@ There are tagged as `nightly-latest` and `nightly-MM-YYYY`
 * Kubectl
 * JQ
 * VIM
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/nitrotol/devops-gitpod)

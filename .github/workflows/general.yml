@@ -1,0 +1,16 @@
+name: General updates
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  metadata-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docker Hub description update
+        uses: peter-evans/dockerhub-description@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}

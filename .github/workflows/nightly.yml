@@ -29,5 +29,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags:
-            ${{ github.repository }}:nightly-latest , ${{ github.repository }}:nightly-${{ env.NIGHTLY_TAG }}
+          tags: >
+            ${{ github.repository }}:nightly-latest , 
+            ${{ github.repository }}:nightly-${{ env.NIGHTLY_TAG }}
