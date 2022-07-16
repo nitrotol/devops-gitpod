@@ -22,7 +22,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          build-args:
+          build-args: |
             BASE_TAG=${{ secrets.BASE_TAG }}
           tags: ${{ github.repository }}:${{ github.ref_name }} , ${{ github.repository }}:latest
       - name: Set env for tag
@@ -33,7 +33,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          build-args:
+          build-args: |
             BASE_TAG=${{ secrets.BASE_TAG }}
           tags:
             ${{ github.repository }}:nightly-latest , ${{ github.repository }}:nightly-${{ env.NIGHTLY_TAG }}
