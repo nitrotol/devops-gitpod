@@ -1,0 +1,8 @@
+tasks:
+  - init: echo 'init script' # runs during prebuild
+    command: echo 'start script'
+
+ports:
+  - name: vnc
+    port: 6080
+image: gitpod/workspace-full-vnc
